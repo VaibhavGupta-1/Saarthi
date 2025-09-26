@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "780384182699",
+    "project_id": "saarthi-88109",
+    "storage_bucket": "saarthi-88109.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780384182699:android:4faa5ee969948d6225f2ee",
+        "android_client_info": {
+          "package_name": "com.example.saarthi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780384182699-t651uaq9jttcqr55kobd5llbs7sevb9u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.saarthi",
+            "certificate_hash": "728f65a1a5ffd81974190b0e6858a31b79e83d65"
+          }
+        },
+        {
+          "client_id": "780384182699-6iv3cpgtdt8abk6ffb512jcetelcvgsl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHMDBij8p8mL8pR5_J06eP5GGWJeccXA4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "780384182699-6iv3cpgtdt8abk6ffb512jcetelcvgsl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

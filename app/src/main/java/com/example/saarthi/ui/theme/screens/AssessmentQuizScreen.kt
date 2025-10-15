@@ -11,13 +11,11 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.saarthi.viewmodel.SharedQuizViewModel
 
-// A simple data class to hold our quiz question structure
 private data class QuizQuestion(
     val questionText: String,
     val options: List<String>
 )
 
-// Our list of questions
 private val questions = listOf(
     QuizQuestion(
         questionText = "What subjects are you most passionate about?",
@@ -41,7 +39,7 @@ private val questions = listOf(
     )
 )
 
-@OptIn(ExperimentalMaterial3Api::class) // <-- Add this if it's not there
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AssessmentQuizScreen(
     navController: NavController,
@@ -58,13 +56,11 @@ fun AssessmentQuizScreen(
         containerColor = MaterialTheme.colorScheme.background
     ) { innerPadding ->
         Column(
-            // Apply the padding from Scaffold
             modifier = Modifier
                 .fillMaxSize()
                 .padding(innerPadding)
                 .padding(16.dp) // Keep our own content padding
         ) {
-            // --- Progress Bar ---
             Text(
                 text = "Question ${currentQuestionIndex + 1} of ${questions.size}",
                 style = MaterialTheme.typography.bodyMedium,
@@ -75,8 +71,6 @@ fun AssessmentQuizScreen(
                 progress = (currentQuestionIndex + 1) / questions.size.toFloat(),
                 modifier = Modifier.fillMaxWidth().height(8.dp).clip(MaterialTheme.shapes.small)
             )
-
-            // --- Question Area ---
             Column(
                 modifier = Modifier.weight(1f).padding(top = 32.dp),
                 verticalArrangement = Arrangement.Center
@@ -106,14 +100,11 @@ fun AssessmentQuizScreen(
                 }
             }
 
-            // --- Navigation Button ---
             Button(
                 onClick = {
-                    // Submit the collected answers to the shared ViewModel
                     viewModel.submitAnswers(answers)
 
                     if (isLastQuestion) {
-                        // Navigate to results after submitting
                         navController.navigate("results")
                     } else {
                         currentQuestionIndex++

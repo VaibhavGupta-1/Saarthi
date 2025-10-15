@@ -18,7 +18,7 @@ class ChatViewModel : ViewModel() {
     val isLoading = _isLoading.asStateFlow()
 
     private val generativeModel = GenerativeModel(
-        modelName = "gemini-1.5-flash", // Use "gemini-pro-vision" for multi-modal
+        modelName = "gemini-2.0-flash", // Use "gemini-pro-vision" for multi-modal
         apiKey = BuildConfig.GEMINI_API_KEY
     )
 
